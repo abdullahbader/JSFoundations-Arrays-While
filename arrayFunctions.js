@@ -9,8 +9,17 @@
  * isArrayLengthOdd([1, 2, 3, 4]) -> flase
  */
 function isArrayLengthOdd(numbers) {
-  // Your code here
+
+  if(numbers.length%2 > 0 ){
+    return true
+  }
+  return false
 }
+
+
+ 
+  // Your code here
+
 
 /**
  * isArrayLengthEven(numbers):
@@ -23,8 +32,15 @@ function isArrayLengthOdd(numbers) {
  * isArrayLengthEven([1, 2, 3, 4]) -> true
  */
 function isArrayLengthEven(numbers) {
-  // Your code here
+  let i = 0
+  if(numbers.length%2 > 0 ){
+    return false
+  }
+  return true
 }
+
+isArrayLengthEven((1,5,9,6))
+
 
 /**
  * addLailaToArray(instructors):
@@ -35,6 +51,11 @@ function isArrayLengthEven(numbers) {
  * addLailaToArray(["Mshary", "Hasan"]) -> ["Mshary", "Hasan", "Laila"]
  */
 function addLailaToArray(instructors) {
+   instructors.push('Laila')
+  return instructors;
+
+  
+  
   // Your code here
 }
 
@@ -47,7 +68,10 @@ function addLailaToArray(instructors) {
  * eliminateTeam(["Brazil", "Germany", "Italy"]) -> "Italy"
  */
 function eliminateTeam(teams) {
-  // Your code here
+   
+  
+  teams = teams[teams.length -1 ]
+return teams
 }
 
 /**
@@ -61,7 +85,21 @@ function eliminateTeam(teams) {
  * secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]) -> []
  */
 function secondHalfOfArrayIfItIsEven(fruits) {
-  // Your code here
+
+    if(fruits.length%2 > 0 ){
+           
+      return []
+    
+    }
+    else{
+     fruits = fruits.splice( fruits.length/2,(fruits.length + 1))
+   
+  return fruits 
+
+    } 
+
+
+
 }
 
 /**
@@ -79,8 +117,18 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  * - Use string method .endsWith()
  */
 function youGottaCalmDown(shout) {
-  // Your code here
+ 
+  
+    while (shout.endwith("!!") )
+        return shout.splice(-1,0)
+        
+  
+  return shout 
 }
+
+ 
+
+
 
 module.exports = {
   isArrayLengthOdd,
