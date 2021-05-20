@@ -117,16 +117,12 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  * - Use string method .endsWith()
  */
 function youGottaCalmDown(shout) {
- 
-  
-    while (shout.endwith("!!") )
-        return shout.splice(-1,0)
-        
-  
-  return shout 
-}
 
- 
+  let result = shout;
+  while (result[result.length - 1] === "!") 
+  {result = result.slice(0, -1);}
+  return result + "!";
+}
 
 
 
